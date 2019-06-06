@@ -92,6 +92,7 @@ JSONEditor.defaults.editors.array = JSONEditor.AbstractEditor.extend({
       this.header = document.createElement('span');
       this.header.textContent = this.getTitle();
       this.title = this.theme.getHeader(this.header);
+      this.header.classList.add("json-editor-array-header");
       this.container.appendChild(this.title);
       this.title_controls = this.theme.getHeaderButtonHolder();
       this.title.appendChild(this.title_controls);
@@ -145,6 +146,9 @@ JSONEditor.defaults.editors.array = JSONEditor.AbstractEditor.extend({
         this.panel.appendChild(this.row_holder);
     }
 
+    this.title.classList.add("json-editor-array-title");
+    this.container.classList.add("json-editor-array-container");
+    this.row_holder.classList.add("json-editor-array-list-container");
     // Add controls
     this.addControls();
   },
@@ -230,6 +234,8 @@ JSONEditor.defaults.editors.array = JSONEditor.AbstractEditor.extend({
     else {
       holder = this.theme.getIndentedPanel();
     }
+
+    holder.classList.add("json-editor-array-item-holder");
 
     this.row_holder.appendChild(holder);
 

@@ -508,6 +508,8 @@ JSONEditor.defaults.editors.object = JSONEditor.AbstractEditor.extend({
       this.header = document.createElement('span');
       this.header.textContent = this.getTitle();
       this.title = this.theme.getHeader(this.header);
+      this.title.classList.add("json-editor-obj-title");
+      this.header.classList.add("json-editor-obj-header");
       this.container.appendChild(this.title);
       this.container.style.position = 'relative';
 

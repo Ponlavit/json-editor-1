@@ -173,6 +173,8 @@ JSONEditor.defaults.editors.multiple = JSONEditor.AbstractEditor.extend({
     this.header = this.label = this.theme.getFormInputLabel(this.getTitle());
     this.container.appendChild(this.header);
 
+    this.header.classList.add("json-editor-multiple-header");
+
     this.switcher = this.theme.getSwitcher(this.display_text);
     container.appendChild(this.switcher);
     this.switcher.addEventListener('change',function(e) {

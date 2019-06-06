@@ -189,6 +189,7 @@ JSONEditor.defaults.editors.select = JSONEditor.AbstractEditor.extend({
     });
 
     this.control = this.theme.getFormControl(this.label, this.input, this.description, this.infoButton);
+    this.control.classList.add("json-editor-selection-header");
     this.container.appendChild(this.control);
 
     this.value = this.enum_values[0];
